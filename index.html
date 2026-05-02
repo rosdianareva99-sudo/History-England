@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>History of England</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════
+     NAVBAR
+══════════════════════════ -->
+<nav>
+  <span class="nav-logo">History of England</span>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')">Home</a></li>
+    <li><a href="#" onclick="showPage('fakta')">Fakta Menarik</a></li>
+  </ul>
+  <div class="nav-search">
+    <input type="text" placeholder="SEARCH" id="searchInput" />
+    <button onclick="handleSearch()">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"
+              stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ══════════════════════════
+     HOME PAGE
+══════════════════════════ -->
+<div id="home" class="page active">
+
+  <div class="hero-section">
+    <!-- Kiri: Judul + Gambar + Teks -->
+    <div class="hero-left">
+      <h1 class="page-title">HISTORY OF ENGLAND</h1>
+      <img
+        src="images/1.jpg"
+        alt="Coronation Scene"
+        class="hero-image"
+        onerror="this.style.background='#a8865a';"
+      />
+      <p class="hero-text">
+        Dinasti kerajaan adalah garis keturunan keluarga yang memerintah Inggris dalam periode tertentu.
+        Inggris telah dipimpin oleh beberapa dinasti besar, seperti Norman, Plantagenet, Tudor, Stuart,
+        Hanover, hingga Windsor. Dinasti Tudor dikenal melalui masa pemerintahan Henry VIII dan Elizabeth I,
+        sedangkan dinasti Windsor merupakan dinasti modern yang masih berkuasa hingga masa Elizabeth II.
+        Pergantian dinasti ini menunjukkan perkembangan Inggris dari kerajaan lama hingga menjadi negara
+        modern seperti sekarang.
+      </p>
+    </div>
+
+    <!-- Kanan: Grid Kartu Raja/Ratu -->
+    <div class="monarch-grid">
+
+      <div class="monarch-card" onclick="showDetail('henry')">
+        <img
+          src="images/2.jpg"
+          alt="Henry VIII"
+          onerror="this.style.background='#a8865a';"
+        />
+        <h3>Henry VIII</h3>
+        <p>Lahir : 28 Juni 1491<br>Wafat : 28 Januari 1547<br>Masa pemerintahan : 1509–1547</p>
+      </div>
+
+      <div class="monarch-card" onclick="showDetail('elizabeth1')">
+        <img
+          src="images/3.jpg"
+          alt="Elizabeth I"
+          onerror="this.style.background='#a8865a';"
+        />
+        <h3>Elizabeth I</h3>
+        <p>Lahir : 7 September 1533<br>Wafat : 24 Maret 1603<br>Masa pemerintahan : 1558–1603</p>
+      </div>
+
+      <div class="monarch-card" onclick="showDetail('victoria')">
+        <img
+          src="images/4.jpg"
+          alt="Victoria"
+          onerror="this.style.background='#a8865a';"
+        />
+        <h3>Victoria</h3>
+        <p>Lahir : 24 Mei 1819<br>Wafat : 22 Januari 1901<br>Masa pemerintahan : 1837–1901</p>
+      </div>
+
+      <div class="monarch-card" onclick="showDetail('elizabeth2')">
+        <img
+          src="images/5.jpg"
+          alt="Elizabeth II"
+          onerror="this.style.background='#a8865a';"
+        />
+        <h3>Elizabeth II</h3>
+        <p>Lahir : 21 April 1926<br>Wafat : 8 September 2022<br>Masa pemerintahan : 1952–2022</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Events & Monarki di Home -->
+  <div style="padding: 0 60px 60px;">
+    <div class="events-section">
+
+      <!-- English Reformation -->
+      <div class="event-card">
+        <img
+          src="images/6.jpg"
+          alt="English Reformation"
+          onerror="this.style.background='#a8865a';"
+        />
+        <div class="event-info">
+          <h2>English Reformation</h2>
+          <p>English Reformation adalah peristiwa pada abad ke-16 ketika Inggris memisahkan diri dari Gereja
+          Katolik Roma. Peristiwa ini dipimpin oleh Henry VIII setelah keinginannya tidak disetujui oleh Paus.
+          Akibatnya, ia mendirikan Gereja Inggris (Church of England) dan menjadikan raja sebagai pemimpin
+          tertinggi gereja. Perubahan ini membuat kekuasaan raja semakin besar dan membawa perubahan dalam
+          sistem keagamaan di Inggris.</p>
+        </div>
+      </div>
+
+      <!-- Spanish Armada -->
+      <div class="event-card">
+        <img
+          src="images/7.jpg"
+          alt="Spanish Armada"
+          onerror="this.style.background='#a8865a';"
+        />
+        <div class="event-info">
+          <h2>Spanish Armada</h2>
+          <p>Spanish Armada adalah pertempuran laut besar pada tahun 1588 antara Inggris dan Spanyol.
+          Armada besar Spanyol dikirim untuk menyerang Inggris, namun berhasil dikalahkan oleh pasukan
+          Inggris di bawah kepemimpinan Elizabeth I. Selain strategi Inggris yang baik, cuaca buruk juga
+          membantu menghancurkan armada Spanyol. Kemenangan ini membuat Inggris semakin kuat sebagai
+          kekuatan laut dan meningkatkan pengaruhnya di dunia.</p>
+        </div>
+      </div>
+
+      <!-- Industrial Revolution -->
+      <div class="event-card">
+        <img
+          src="images/8.jpg"
+          alt="Industrial Revolution"
+          onerror="this.style.background='#a8865a';"
+        />
+        <div class="event-info">
+          <h2>Industrial Revolution</h2>
+          <p>Industrial Revolution adalah perubahan besar yang terjadi di Inggris pada akhir abad ke-18
+          hingga 19, dari masyarakat agraris menjadi masyarakat industri. Pada masa ini, banyak ditemukan
+          mesin dan teknologi baru yang membuat produksi menjadi lebih cepat dan efisien, terutama dalam
+          bidang tekstil dan transportasi. Perkembangan ini semakin pesat pada era Queen Victoria.
+          Perubahan ini membuat Inggris menjadi salah satu negara industri terkuat di dunia dan membawa
+          dampak besar pada ekonomi serta kehidupan masyarakat.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sistem Monarki -->
+    <div class="monarki-section">
+      <h2>Sistem Monarki</h2>
+      <p>Sistem monarki Inggris adalah bentuk pemerintahan di mana raja atau ratu menjadi kepala negara.
+      Pada masa lalu, raja memiliki kekuasaan yang sangat besar dan dapat mengambil keputusan penting tanpa
+      banyak campur tangan pihak lain. Namun, seiring berjalannya waktu, kekuasaan tersebut mulai dibatasi
+      oleh hukum dan parlemen, terutama setelah berbagai perubahan dalam sejarah seperti konflik antara raja
+      dan parlemen.</p>
+      <p>Saat ini, Inggris menganut sistem monarki konstitusional, di mana raja atau ratu tidak menjalankan
+      pemerintahan secara langsung. Peran mereka lebih bersifat simbolis, seperti menghadiri acara kenegaraan,
+      mewakili negara, dan menjaga tradisi kerajaan. Sementara itu, pemerintahan dijalankan oleh perdana
+      menteri dan parlemen yang dipilih oleh rakyat.</p>
+      <p>Perubahan ini menunjukkan bagaimana Inggris berkembang dari sistem kerajaan dengan kekuasaan mutlak
+      menjadi negara modern dengan sistem demokrasi, tanpa menghilangkan peran penting kerajaan sebagai
+      simbol persatuan dan identitas nasional.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 History of England &nbsp;|&nbsp; Dibuat oleh: Reva Rosdiana
+  </footer>
+</div>
+
+<!-- ══════════════════════════
+     FAKTA MENARIK PAGE (fakta tokoh saja)
+══════════════════════════ -->
+<div id="fakta" class="page">
+
+  <div style="padding: 50px 60px 60px; max-width: 860px; margin: 0 auto;">
+
+    <div class="fakta-header">
+      <h1>Fakta Menarik</h1>
+      <p>Fakta unik seputar tokoh-tokoh bersejarah Inggris</p>
+    </div>
+
+    <img
+      src="images/9.jpg"
+      alt="Coronation"
+      class="coronation-img"
+      onerror="this.style.background='#a8865a';"
+    />
+
+    <div class="fact-cards-grid">
+
+      <div class="fact-card">
+        <h3>Queen Elizabeth I</h3>
+        <p>Elizabeth I tidak pernah menikah dan dikenal sebagai "The Virgin Queen". Ia memilih untuk fokus
+        pada pemerintahannya dan menjaga stabilitas negara, sehingga dianggap sebagai salah satu ratu
+        paling berpengaruh dalam sejarah Inggris.</p>
+      </div>
+
+      <div class="fact-card">
+        <h3>Henry VIII</h3>
+        <p>Henry VIII memiliki enam istri, dan keinginannya untuk menikah lagi menjadi salah satu penyebab
+        perubahan besar dalam sistem keagamaan di Inggris, yaitu pemisahan dari Gereja Katolik.</p>
+      </div>
+
+      <div class="fact-card">
+        <h3>Queen Elizabeth II</h3>
+        <p>Elizabeth II adalah ratu dengan masa pemerintahan terlama dalam sejarah Inggris, yaitu lebih
+        dari 70 tahun. Ia menjadi simbol kestabilan dan perubahan Inggris dari masa lama ke era modern.</p>
+      </div>
+
+      <div class="fact-card">
+        <h3>Queen Elizabeth I &amp; Queen Elizabeth II</h3>
+        <p>Meskipun memiliki nama yang sama, Elizabeth II bukanlah anak atau keturunan langsung dari
+        Elizabeth I. Elizabeth I tidak pernah menikah dan tidak memiliki anak, sehingga garis keturunannya
+        berakhir. Elizabeth II berasal dari dinasti yang berbeda dan hidup ratusan tahun setelahnya.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2026 History of England &nbsp;|&nbsp; Dibuat oleh: Reva Rosdiana
+  </footer>
+</div>
+
+<!-- ══════════════════════════
+     MONARCH DETAIL PAGE
+══════════════════════════ -->
+<div id="detail" class="page">
+  <div style="padding: 60px; max-width: 900px; margin: 0 auto;">
+    <span class="detail-back" onclick="goBack()">Kembali ke Home</span>
+    <div class="detail-content" id="detail-body"></div>
+  </div>
+  <footer>
+    © 2026 History of England &nbsp;|&nbsp; Dibuat oleh: Reva Rosdiana dan Almira khaerunisa
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
