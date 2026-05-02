@@ -1,8 +1,11 @@
+// ── BASE URL untuk gambar ──
+const BASE = window.location.origin + '/History-England/';
+
 // ── DATA RAJA/RATU ──
 const monarchData = {
   henry: {
     name: 'HENRY VIII',
-    img: '2.jpg',
+    img: BASE + '2.jpg',
     lahir: '28 Juni 1491, Greenwich',
     wafat: '28 Januari 1547, London',
     kebangsaan: 'Inggris',
@@ -12,7 +15,7 @@ const monarchData = {
   },
   elizabeth1: {
     name: 'ELIZABETH I',
-    img: '3.jpg',
+    img: BASE + '3.jpg',
     lahir: '7 September 1533, Greenwich',
     wafat: '24 Maret 1603, Richmond Palace',
     kebangsaan: 'Inggris',
@@ -22,7 +25,7 @@ const monarchData = {
   },
   victoria: {
     name: 'VICTORIA',
-    img: '4.jpg',
+    img: BASE + '4.jpg',
     lahir: '24 Mei 1819, Kensington Palace',
     wafat: '22 Januari 1901, Osborne House',
     kebangsaan: 'Inggris',
@@ -36,7 +39,7 @@ const monarchData = {
   },
   elizabeth2: {
     name: 'ELIZABETH II',
-    img: '5.jpg',
+    img: BASE + '5.jpg',
     lahir: '21 April 1926, Mayfair',
     wafat: '8 September 2022, Balmoral Castle',
     kebangsaan: 'Inggris',
@@ -96,7 +99,6 @@ function handleSearch() {
   const q = document.getElementById('searchInput').value.toLowerCase().trim();
   if (!q) return;
 
-  // Cari nama raja/ratu
   for (const [key, m] of Object.entries(monarchData)) {
     if (m.name.toLowerCase().includes(q)) {
       showDetail(key);
@@ -104,7 +106,6 @@ function handleSearch() {
     }
   }
 
-  // Cari halaman fakta menarik
   if (q.includes('fakta') || q.includes('menarik') || q.includes('reformation') || q.includes('armada') || q.includes('industrial')) {
     showPage('fakta');
     return;
