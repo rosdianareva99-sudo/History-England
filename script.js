@@ -2,7 +2,7 @@
 const monarchData = {
   henry: {
     name: 'HENRY VIII',
-    img: 'images/2.jpg',
+    img: './img/2.jpg',
     lahir: '28 Juni 1491, Greenwich',
     wafat: '28 Januari 1547, London',
     kebangsaan: 'Inggris',
@@ -12,7 +12,7 @@ const monarchData = {
   },
   elizabeth1: {
     name: 'ELIZABETH I',
-    img: 'images/3.jpg',
+    img: './img/3.jpg',
     lahir: '7 September 1533, Greenwich',
     wafat: '24 Maret 1603, Richmond Palace',
     kebangsaan: 'Inggris',
@@ -22,7 +22,7 @@ const monarchData = {
   },
   victoria: {
     name: 'VICTORIA',
-    img: 'images/4.jpg',
+    img: './img/4.jpg',
     lahir: '24 Mei 1819, Kensington Palace',
     wafat: '22 Januari 1901, Osborne House',
     kebangsaan: 'Inggris',
@@ -36,7 +36,7 @@ const monarchData = {
   },
   elizabeth2: {
     name: 'ELIZABETH II',
-    img: 'images/5.jpg',
+    img: './img/5.jpg',
     lahir: '21 April 1926, Mayfair',
     wafat: '8 September 2022, Balmoral Castle',
     kebangsaan: 'Inggris',
